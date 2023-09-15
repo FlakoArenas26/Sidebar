@@ -13,11 +13,30 @@ body {
     border-radius: 20px;
 }
 
-.icon {
-    margin: 0 10px;
+.button .icon {
+    display: flex;
+    align-items: center;
+    margin: 0 5px;
 }
 
+.moon-icon,
+.sun-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    color: white;
+}
 
+.moon-icon {
+    right: 10px; /* Icono de luna en el lado izquierdo */
+    color: white;
+}
+
+.sun-icon {
+    left: 10px;
+    color: white; /* Icono de sol en el lado derecho */
+}
 
 .switch {
   position: relative;
@@ -61,11 +80,11 @@ body {
 
 
 input:checked + .slider {
-  background-color: yellow;
+  background-color: gray;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px yellow;
+  box-shadow: 0 0 1px gray;
 }
 
 input:checked + .slider:before {

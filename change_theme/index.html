@@ -13,9 +13,11 @@
         <label class="switch">
             <input type="checkbox" id="toggleButton">
             <span class="slider round"></span>
-            <ion-icon name="moon-outline"></ion-icon>
+            <ion-icon class="moon-icon" name="moon-outline"></ion-icon>
+            <ion-icon class="sun-icon" name="sunny-outline"></ion-icon>
         </label>
     </div>
+
 
     <script>
         const toggleButton = document.getElementById('toggleButton');
@@ -25,10 +27,10 @@
         toggleButton.addEventListener('change', function () {
             if (this.checked) {
                 body.style.background = 'white';
-                iconElement.setAttribute('name', 'sunny-outline');
+                // iconElement.setAttribute('name', 'sunny-outline');
             } else {
                 body.style.background = 'black';
-                iconElement.setAttribute('name', 'moon-outline');
+                // iconElement.setAttribute('name', 'moon-outline');
             }
         });
 
