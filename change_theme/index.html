@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="button">
+        <label class="switch">
+            <input type="checkbox" id="toggleButton">
+            <span class="slider round"></span>
+            <ion-icon name="moon-outline"></ion-icon>
+        </label>
+    </div>
+
+    <script>
+        const toggleButton = document.getElementById('toggleButton');
+        const body = document.body;
+        const iconElement = document.querySelector('.button ion-icon');
+
+        toggleButton.addEventListener('change', function () {
+            if (this.checked) {
+                body.style.background = 'white';
+                iconElement.setAttribute('name', 'sunny-outline');
+            } else {
+                body.style.background = 'black';
+                iconElement.setAttribute('name', 'moon-outline');
+            }
+        });
+
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
